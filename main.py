@@ -22,7 +22,6 @@ def checkPass(pwd):
         if hashes[0] == rest:
             return hashes[1]
 
-
     return 0
 
 
