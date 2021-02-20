@@ -41,4 +41,3 @@ if __name__ == '__main__':
               ' That doesn\'t necessarily mean it\'s a good password,'
               ' merely that it\'s not indexed on this site')
 
-    # print(res.text)
