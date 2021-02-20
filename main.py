@@ -6,6 +6,7 @@ import getpass
 def checkPass(pwd):
     pwd = pwd.strip()
     hashedPass = hashlib.sha1(pwd.encode('utf-8')).hexdigest()
+    print(hashedPass)
     firstFive = hashedPass[:5]
     rest = hashedPass[5:].upper()
     url = 'https://api.pwnedpasswords.com/range/' + firstFive
@@ -21,13 +22,14 @@ def checkPass(pwd):
         if hashes[0] == rest:
             return hashes[1]
 
+
     return 0
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    pwd = getpass.getpass()
-
+    # pwd = getpass.getpass()
+    pwd = 'password'
     try:
         count = checkPass(pwd)
     except:
