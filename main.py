@@ -27,8 +27,7 @@ def checkPass(pwd):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    # pwd = getpass.getpass()
-    pwd = 'password'
+    pwd = getpass.getpass()
     try:
         count = checkPass(pwd)
     except:
@@ -40,4 +39,5 @@ if __name__ == '__main__':
         print('Your Password wasn\'t found.'
               ' That doesn\'t necessarily mean it\'s a good password,'
               ' merely that it\'s not indexed on this site')
+
 
